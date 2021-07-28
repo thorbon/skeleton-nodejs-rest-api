@@ -1,0 +1,20 @@
+import config from './config.global.js';
+
+config.env = 'production';
+config.hostname = 'test.example';
+
+//elasticsearch config
+config.elasticsearch = {};
+config.elasticsearch.host = process.env.ELASTICSEARCH_HOST || 'localhost';
+config.elasticsearch.port = 9200;
+
+// API Database
+config.mysql.ncapi = {
+  host: 'localhost',
+  port: 3306,
+  username: '',
+  password: '',
+  database: ''
+}
+
+export default config;
